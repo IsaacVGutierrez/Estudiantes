@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<script src="https://unpkg.com/vue@next"></script> </head> 
+<body> 
+<div id="app"> 
+<p>Contador: {{ contador }}</p> 
+<button @click="incrementar">Incrementar</button> <button @click="decrementar">Decrementar</button> </div> 
+<script> 
+const app = Vue.createApp({ 
+data() { 
+return { 
+contador: 0 
+} 
+}, 
+methods: { 
+incrementar() { 
+this.contador++; 
+}, 
+decrementar() { 
+if (this.contador > 0) { 
+this.contador--; 
+} 
+} 
+} 
+});
+app.mount('#app'); </script> 
+</body> 
+</html>
+
+
